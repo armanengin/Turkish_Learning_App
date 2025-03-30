@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#E30A17"/>
+  <circle cx="100" cy="100" r="70" fill="white"/>
+  <path d="M100 150C127.614 150 150 127.614 150 100C150 72.3858 127.614 50 100 50C72.3858 50 50 72.3858 50 100C50 127.614 72.3858 150 100 150Z" fill="#003F87"/>
+  <g transform="translate(65, 72)">
+    <text fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">T</text>
+  </g>
+  <g transform="translate(85, 90)">
+    <text fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Learn</text>
+  </g>
+  <g transform="translate(85, 110)">
+    <text fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Turkish</text>
+  </g>
+</svg>

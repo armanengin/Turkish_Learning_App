@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --turkish-red: #E30A17;
+  --turkish-blue: #003F87;
+  --turkish-turquoise: #00C1DE;
+  --turkish-gold: #FFD700;
+}
+
+body {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Custom components */
+.turkish-button {
+  @apply bg-turkish-blue text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors;
+}
+
+.turkish-card {
+  @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow;
+}
+
+.turkish-input {
+  @apply border border-gray-300 rounded-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-turkish-blue;
+}
+
+/* Language highlight */
+.turkish-text {
+  @apply text-turkish-blue font-medium;
+}
+
+.vocabulary-highlight {
+  @apply bg-turkish-turquoise bg-opacity-20 text-turkish-blue hover:bg-opacity-30 px-2 py-1 rounded;
+}
+
+/* Progress indicators */
+.progress-bar {
+  @apply h-2 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.progress-value {
+  @apply h-full bg-turkish-blue transition-all duration-300;
+}
+
+/* Flashcard styles */
+.flashcard {
+  @apply relative h-64 w-full bg-white rounded-xl shadow-lg transition-transform duration-300 transform-gpu;
+}
+
+.flashcard-front, .flashcard-back {
+  @apply absolute inset-0 p-6 flex flex-col items-center justify-center text-center backface-hidden transition-transform duration-500;
+}
+
+.flashcard-back {
+  @apply bg-turkish-blue text-white transform-gpu rotate-y-180;
+}
+
+.flashcard.flipped .flashcard-front {
+  @apply transform-gpu rotate-y-180;
+}
+
+.flashcard.flipped .flashcard-back {
+  @apply transform-gpu rotate-y-0;
+}
+
+/* Utilities */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+}
